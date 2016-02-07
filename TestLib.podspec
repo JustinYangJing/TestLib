@@ -89,12 +89,12 @@ Pod::Spec.new do |s|
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
-  #
+  
 
   s.source_files  = "TestLib/TestLib.h"
   
   s.subspec 'Test' do |s2|
-    s2.source_files = 'TestLib/Test/*.{m.h}'
+    s2.source_files = "Test/*.{m.h}"
   end
 
   # s.public_header_files = "Classes/**/*.h"
