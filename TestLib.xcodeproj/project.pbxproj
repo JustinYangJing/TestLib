@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B8D9D751C6750B700CA1804 /* TestLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B8D9D741C6750B700CA1804 /* TestLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B8D9D7F1C6751BB00CA1804 /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B8D9D7D1C6751BB00CA1804 /* Test.h */; };
+		1B8D9D7F1C6751BB00CA1804 /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B8D9D7D1C6751BB00CA1804 /* Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B8D9D801C6751BB00CA1804 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8D9D7E1C6751BB00CA1804 /* Test.m */; };
 /* End PBXBuildFile section */
 

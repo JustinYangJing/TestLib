@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char TestLibVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TestLib/PublicHeader.h>
 
-
+#import <TestLib/Test.h>
