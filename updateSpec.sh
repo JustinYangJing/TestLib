@@ -58,7 +58,7 @@ commitId=`git log --pretty=oneline | sed -n '1p' | cut -d " " -f 1`
 preDir=`pwd`
 cd  ~/.cocoapods/repos/mySpecs/
 echo -e "`pwd` --- ${podSpecDir}/${version}/${podName}"
-commitStr=`cat test.txt | grep ":commit =>"`
+commitStr=`cat ${podSpecDir}/${version}/${podName} | grep ":commit =>"`
 if [[ ! $commitStr ]]; then
 	source=`cat test.txt | grep "s.source"`
 	source=${source#*https:}
