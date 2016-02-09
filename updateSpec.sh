@@ -64,7 +64,7 @@ if [[ ! $commitStr ]]; then
 	source=${source#*https:}
 	source=${source%%\}*}
 	echo -e "aaaa -${source}"
-	sed -i.bak "s:${source}:${source} \:commit => \"${commitId}\":g" ${podSpecDir}/${version}/${podName}
+	sed -i.bak "s:${source}:${source}, \:commit => \"${commitId}\":g" ${podSpecDir}/${version}/${podName}
 	rm ${podSpecDir}/${version}/${podName}.bak
 else
 	sed -i.bak "s:\(commit =>\).*:\1 \"${commitId}\" \}:g" ${podSpecDir}/${version}/${podName}
