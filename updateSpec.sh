@@ -60,7 +60,7 @@ cd  ~/.cocoapods/repos/mySpecs/
 echo -e "`pwd` --- ${podSpecDir}/${version}/${podName}"
 commitStr=`cat ${podSpecDir}/${version}/${podName} | grep ":commit =>"`
 if [[ ! $commitStr ]]; then
-	source=`cat test.txt | grep "s.source"`
+	source=`cat ${podSpecDir}/${version}/${podName} | grep "s.source"`
 	source=${source#*https:}
 	source=${source%% \}}
 	echo ${source}
