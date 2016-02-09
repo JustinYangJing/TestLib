@@ -1,0 +1,1 @@
+s.source       = { :git => "https://github.com/JustinYangJing/TestLib.git" :commit => xxxx }
