@@ -18,11 +18,11 @@ git commit -m "for update pod specs"
 git push origin master
 
 version=`cat ${podName} | grep "s.version" | cut -d "\"" -f 2`
-echo -e "💚💚💚you want to update ${version} to pod pod sepc?💚💚💚"
-echo -e "💚💚💚press y to continue,prees q to exit💚💚💚"
+echo -e "💚  💚  💚  you want to update ${version} to pod pod sepc?  💚  💚  💚"
+echo -e "💚  💚  💚  press y to continue,prees q to exit  💚  💚  💚"
 read input
 while ( [[ $input != "y" ]] && [[ $input != "q" ]] ); do
-	echo -e "💚💚💚press y to continue,press q to exit💚💚💚"
+	echo -e "💚  💚  💚  press y to continue,press q to exit  💚  💚  💚"
 	read input
 done
 
@@ -57,13 +57,12 @@ cp ${podName} ~/.cocoapods/repos/mySpecs/${podSpecDir}/${version}/${podName}
 commitId=`git log --pretty=oneline | sed -n '1p' | cut -d " " -f 1`
 preDir=`pwd`
 cd  ~/.cocoapods/repos/mySpecs/
-echo -e "`pwd` -- ${podSpecDir}/${version}/${podName}"
+#echo -e "`pwd` -- ${podSpecDir}/${version}/${podName}"
 commitStr=`cat ${podSpecDir}/${version}/${podName} | grep ":commit =>"`
 if [[ ! $commitStr ]]; then
 	source=`cat ${podSpecDir}/${version}/${podName} | grep "s.source"`
 	source=${source#*https:}
 	source=${source%%\}*}
-	echo -e "aaaa -${source}"
 	sed -i.bak "s:${source}:${source}, \:commit => \"${commitId}\":g" ${podSpecDir}/${version}/${podName}
 	rm ${podSpecDir}/${version}/${podName}.bak
 else
@@ -71,7 +70,6 @@ else
 	rm ${podSpecDir}/${version}/${podName}.bak
 fi
 
-echo here3
 git add .
 git commit -m "update ${podSpecDir}/${version}"
 git push origin master

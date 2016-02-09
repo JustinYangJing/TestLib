@@ -11,6 +11,6 @@
 @implementation Test
 -(void)libTest{
     NSLog(@"%@",[self class]);
-    NSLog(@"56655");
+    NSLog(@"test1");
 }
 @end
