@@ -62,7 +62,7 @@ commitStr=`cat ${podSpecDir}/${version}/${podName} | grep ":commit =>"`
 if [[ ! $commitStr ]]; then
 	source=`cat ${podSpecDir}/${version}/${podName} | grep "s.source"`
 	source=${source#*https:}
-	source=${source%% \}}
+	source=${source%%\}}
 	echo -e "aaaa -${source}"
 	sed -i.bak "s:${source}:${source} \:commit => ${commitId}:g" ${podSpecDir}/${version}/${podName}
 	rm ${podSpecDir}/${version}/${podName}.bak
