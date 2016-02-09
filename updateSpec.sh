@@ -57,7 +57,7 @@ cp ${podName} ~/.cocoapods/repos/mySpecs/${podSpecDir}/${version}/${podName}
 commitId=`git log --pretty=oneline | sed -n '1p' | cut -d " " -f 1`
 preDir=`pwd`
 cd  ~/.cocoapods/repos/mySpecs/
-echo -e "`pwd` --- ${podSpecDir}/${version}/${podName}"
+echo -e "`pwd` -- ${podSpecDir}/${version}/${podName}"
 commitStr=`cat ${podSpecDir}/${version}/${podName} | grep ":commit =>"`
 if [[ ! $commitStr ]]; then
 	source=`cat ${podSpecDir}/${version}/${podName} | grep "s.source"`
